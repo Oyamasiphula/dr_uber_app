@@ -13,8 +13,7 @@ var dbOptions = {
 		database: 'uber_data'
 	};
 
-var myConnectionProvider = new connectionProvider(dbOptions, serviceSetupCallback);
-app.use(myConnectionProvider.setupProvider);
+app = express();
 
 app.use(myConnection(mysql, dbOptions, 'pool'));
 
