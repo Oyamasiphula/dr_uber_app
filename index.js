@@ -39,10 +39,10 @@ app.get('/', function(req, res){
 	res.render('users')
 }); 
 
-app.post('/step/1', function(req, res){
+app.post('/issues', function(req, res){
 	// do something with user data
 
-	res.render('step2')
+	res.render('step2_issues')
 });
 
 app.post('/step/2', function(req, res){
@@ -52,9 +52,9 @@ app.post('/step/2', function(req, res){
 });
 
 
-app.get('/users', function(req, res){
-	res.render('users');
-}); 	
+// app.get('/users', function(req, res){
+// 	res.render('users');
+// }); 	
 
 app.get('/issues', function(req, res){
 	res.render('issues');
