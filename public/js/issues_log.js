@@ -1,74 +1,22 @@
-window.onload = function() {
-
-  // Get references to elements on the page.
-  var form = document.getElementById('message-form');
-  var messageField = document.getElementById('message');
-  var messagesList = document.getElementById('messages');
-  var socketStatus = document.getElementById('status');
-  var closeBtn = document.getElementById('close');
-
-
-  // Create a new WebSocket.
-  var socket = new WebSocket('ws://echo.websocket.org');
-
-
-  // Handle any errors that occur.
-  socket.onerror = function(error) {
-    console.log('WebSocket Error: ' + error);
-  };
-
-
-  // Show a connected message when the WebSocket is opened.
-  socket.onopen = function(event) {
-    socketStatus.innerHTML = 'Connected to: ws://echo.websocket.org';
-    socketStatus.className = 'open';
-  };
-
-
-  // Handle messages sent by the server.
-  socket.onmessage = function(event) {
-    var message = event.data;
-    messagesList.innerHTML += '<li class="received"><span>Received:</span>' +
-                               message + '</li>';
-  };
-
-
-  // Show a disconnected message when the WebSocket is closed.
-  socket.onclose = function(event) {
-    socketStatus.innerHTML = 'Disconnected from WebSocket.';
-    socketStatus.className = 'closed';
-  };
-
-
-  // Send a message when the form is submitted.
-  form.onsubmit = function(e) {
-    e.preventDefault();
-
-    // Retrieve the message from the textarea.
-    var message = messageField.value;
-
-    // Send the message through the WebSocket.
-    socket.send(message);
-
-    // Add the message to the messages list.
-    messagesList.innerHTML += '<li class="sent"><span>Sent:</span>' + message +
-                              '</li>';
-
-    // Clear out the message field.
-    messageField.value = '';
-
-    return false;
-  };
-
-
-  // Close the WebSocket connection when the close button is clicked.
-  closeBtn.onclick = function(e) {
-    e.preventDefault();
-
-    // Close the WebSocket.
-    socket.close();
-
-    return false;
-  };
-
-};
+/*
+  Custom checkbox and radio button - Jun 18, 2013
+  (c) 2013 @ElmahdiMahmoud 
+  license: http://www.opensource.org/licenses/mit-license.php
+*/   
+$('input[name="radio-btn"]').wrap('<div class="radio-btn"><i></i></div>');
+$(".radio-btn").on('click', function () {
+    var _this = $(this),
+        block = _this.parent().parent();
+    block.find('input:radio').attr('checked', false);
+    block.find(".radio-btn").removeClass('checkedRadio');
+    _this.addClass('checkedRadio');
+    _this.find('input:radio').attr('checked', true);
+});
+$('input[name="check-box"]').wrap('<div class="check-box"><i></i></div>');
+$.fn.toggleCheckbox = function () {
+    this.attr('checked', !this.attr('checked'));
+}
+$('.check-box').on('click', function () {
+    $(this).find(':checkbox').toggleCheckbox();
+    $(this).toggleClass('checkedBox');
+});
