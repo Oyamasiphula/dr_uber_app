@@ -1,11 +1,21 @@
+/*.date{
+    padding-top: 200px;
+}*/
+
 h1{
   text-align: center;
+}
 
+.dark-placeholder {
+  padding-top: 100px;
+  padding-bottom:10px;
+/*  text-align: center;
+*/
 }
 
 *{  
   margin:0;
-  padding:0;
+  padding-top:200px;
 }
 
 body{
@@ -271,3 +281,5 @@ strong {
 .checkedRadio i {
     background-color: #898A8C;
 }
+
+/*this is the style for date page*/

@@ -45,10 +45,10 @@ app.post('/issues', function(req, res){
 	res.render('step2_issues')
 });
 
-app.post('/step/2', function(req, res){
+app.post('/date', function(req, res){
 	// do something with user data
 
-	res.render('step3')
+	res.render('step3_date')
 });
 
 
