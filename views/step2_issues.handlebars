@@ -2,23 +2,14 @@
 <div class="wrapper">
 	<form class="form" action="/date" method="post">
           <strong> <h4>Issue Selection:</h4></strong>
-        <li>
-            <input type="checkbox" name="check-box" /> <span>Lost & found property</span>
 
-        </li>
-        <li>
-            <input type="checkbox" name="check-box" /> <span>Upload some documentation</span>
+        {{#issues}}
+            <li>
+                <input type="checkbox" name="check-box" value="{{id}}" /> <span>{{issue}}</span>
 
-        </li>
-        <li>
-            <input type="checkbox" name="check-box" /> <span>I Need a cunsultant to gather some info about UBER transportation</span>
+            </li>
+        {{/issues}}
 
-        </li>
-
-        <li>
-            <input type="checkbox" name="check-box" /> <span>change a vehicle</span>
-
-        </li>
       <input type="submit" value="Next" class="button" />
     </form>
 </div>
