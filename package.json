@@ -1,25 +1,34 @@
 {
-  "name": "Dr_Uber_App",
-  "version": "0.0.0",
-  "description": "UBER driver application",
-  "main": "driver.js",
-  "scripts": {
-    "test": "npm test"
-  },
-  "author": "The Frenchmen",
-  "license": "BSD-2-Clause",
+  "name": "dr_uber_app",
+  "version": "1.0.0",
+  "description": "Troubleshooting driver profile issues( signup ).",
+  "main": "index.js",
   "dependencies": {
-    "bcrypt": "^0.8.3",
-    "body-parser": "^1.12.3",
-    "express": "~4.12.4",
+    "bcrypt": "^0.8.5",
+    "bluebird": "^2.9.34",
+    "body-parser": "^1.13.3",
+    "express": "^4.12.4",
     "express-handlebars": "^2.0.1",
     "express-myconnection": "^1.0.4",
-    "express-session": "^1.11.2",
+    "express-session": "^1.11.3",
     "graceful-fs": "^4.1.2",
-    "handlebars": "~3.0.3",
-    "mysql": "^2.6.2",
-    "nodejs": "0.0.0",
-    "nodemon": "~1.3.7",
-    "bluebird": "~2.9.34"
-  }
+    "handlebars": "^3.0.3",
+    "mysql": "^2.9.0",
+    "nodejs": "^0.0.0",
+    "nodemon": "^1.3.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Oyamasiphula/dr_uber_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oyamasiphula/dr_uber_app/issues"
+  },
+  "homepage": "https://github.com/Oyamasiphula/dr_uber_app"
 }
