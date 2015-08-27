@@ -1,4 +1,4 @@
-use uber_data;
+use uber_data; 
 
 DROP table if exists ref_table;
 DROP table if exists issues_table;
