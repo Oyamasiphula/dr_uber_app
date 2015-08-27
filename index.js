@@ -5,6 +5,8 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     session = require('express-session');
 
+var dataServices = require("./routes/uber_routes");
+
 var dbOptions = {
 		host: 'localhost',
 		user: 'uber',
@@ -39,11 +41,14 @@ app.get('/', function(req, res){
 	res.render('users')
 }); 
 
-app.post('/issues', function(req, res){
-	// do something with user data
+app.post('/issues', dataServices.get_issues); 	
 
-	res.render('step2_issues')
-});
+
+// app.post('/issues', function(req, res){
+// 	// do something with user data
+
+// 	res.render('step2_issues')
+// });
 
 app.post('/date', function(req, res){
 	// do something with user data
@@ -55,10 +60,6 @@ app.post('/date', function(req, res){
 // app.get('/users', function(req, res){
 // 	res.render('users');
 // }); 	
-
-app.get('/issues', function(req, res){
-	res.render('issues');
-}); 	
 
 var port = process.env.port || 2000;
 
