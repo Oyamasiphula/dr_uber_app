@@ -3,9 +3,8 @@ var express = require('express'),
     mysql = require('mysql'), 
     myConnection = require('express-myconnection'),
     bodyParser = require('body-parser'),
-    session = require('express-session');
-
-var dataServices = require("./routes/uber_routes");
+    session = require('express-session'),
+    dataServices = require('./routes/uber_routes');
 
 var dbOptions = {
 		host: 'localhost',
@@ -41,27 +40,24 @@ app.get('/', function(req, res){
 	res.render('users')
 }); 
 
-app.post('/issues', dataServices.get_issues); 	
+app.post('/issues', dataServices.get_issues);
 
-
-// app.post('/issues', function(req, res){
-// 	// do something with user data
-
-// 	res.render('step2_issues')
-// });
-
-app.post('/date', function(req, res){
-	// do something with user data
-
-	res.render('step3_date')
+app.get('/issues', function(req, res, next){
+	res.render('step2_issues')
 });
 
+app.post('/step4_ref_no', dataServices.save_driver_issues);
 
+app.get('/step4_ref_no', dataServices.get_ref_info)
 // app.get('/users', function(req, res){
 // 	res.render('users');
 // }); 	
 
-var port = process.env.port || 2000;
+app.get('/issues', function(req, res){
+	res.render('step2_issues');
+}); 	
+
+var port = process.env.port || 2020;
 
 	app.listen(port,function(){
 		console.log(' *.*listening to localhost:' + port);

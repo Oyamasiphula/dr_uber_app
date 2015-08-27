@@ -1,6 +1,24 @@
 /*.date{
     padding-top: 200px;
 }*/
+.image1{
+    float: right;
+    width: 362px;
+    height: 159px;
+}
+
+.image2{
+    width: 367px;
+    height: 159px;
+    }
+
+.header { 
+        background: #FFFFFF url("http://2.bp.blogspot.com/-fEEO0sbC9hQ/VAiiEMSVRFI/AAAAAAAAfOk/HBCfbMPDFf0/s1600/uber.png");
+        background-repeat: no-repeat; 
+        background-position: center; 
+        width: 100%;
+        border: ridge;
+      } 
 
 h1{
   text-align: center;
@@ -9,19 +27,11 @@ h1{
 .dark-placeholder {
   padding-top: 100px;
   padding-bottom:10px;
-/*  text-align: center;
-*/
 }
 
-*{  
+*{ 
   margin:0;
   padding-top:200px;
-}
-
-body{
-  
-  background-color:#C0C0C8;
-  font-family:helvetica;
 }
 
 a{
@@ -38,7 +48,7 @@ a{
   top:20px;
   height:600px;
   width:800px;
-  background:url('http://i.imgur.com/3eP9Z4O.png') center no-repeat;
+  background:url('https://cdn0.vox-cdn.com/thumbor/GTzDqJniY_QqeUL5yWmWMVck7uo=/164x0:1228x599/1600x900/cdn0.vox-cdn.com/uploads/chorus_image/image/45205974/uber_SafeCities_BlogHeader.0.0.png') center no-repeat;
   background-size:cover;
   margin-left:auto;
   margin-right:auto; 
@@ -159,9 +169,10 @@ h3{
     padding: 0;
 }
 body {
+    background-color:#1FBAD6;
+    font-family:helvetica;
     margin-left: 65px;
     margin-right: 65px;
-    background-color: #C0C0C8;
     font: normal 17px/1.5 Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     color: #5E5F63;
 }

@@ -1,0 +1,75 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'node_modules',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.40
+4 verbose node symlink /usr/bin/node
+5 warn package.json nodejs@0.0.0 No description
+6 warn package.json nodejs@0.0.0 No repository field.
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'node_modules', null ]
+9 verbose cache add name=undefined spec="node_modules" args=["node_modules",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'node_modules',
+10 verbose parsed url   path: 'node_modules',
+10 verbose parsed url   href: 'node_modules' }
+11 silly lockFile 9193e35d-node-modules node_modules
+12 verbose lock node_modules /home/oyama/.npm/9193e35d-node-modules.lock
+13 silly lockFile 9193e35d-node-modules node_modules
+14 silly lockFile 9193e35d-node-modules node_modules
+15 verbose addNamed [ 'node_modules', '' ]
+16 verbose addNamed [ null, '*' ]
+17 silly lockFile 1f43ecc2-node-modules node_modules@
+18 verbose lock node_modules@ /home/oyama/.npm/1f43ecc2-node-modules.lock
+19 silly addNameRange { name: 'node_modules', range: '*', hasData: false }
+20 verbose request where is /node_modules
+21 verbose request registry https://registry.npmjs.org/
+22 verbose request id 56cc08c1e5142603
+23 verbose url raw /node_modules
+24 verbose url resolving [ 'https://registry.npmjs.org/', './node_modules' ]
+25 verbose url resolved https://registry.npmjs.org/node_modules
+26 verbose request where is https://registry.npmjs.org/node_modules
+27 info trying registry request attempt 1 at 18:04:19
+28 http GET https://registry.npmjs.org/node_modules
+29 http 404 https://registry.npmjs.org/node_modules
+30 silly registry.get cb [ 404,
+30 silly registry.get   { 'content-type': 'application/json',
+30 silly registry.get     'cache-control': 'max-age=0',
+30 silly registry.get     'content-length': '2',
+30 silly registry.get     'accept-ranges': 'bytes',
+30 silly registry.get     date: 'Wed, 26 Aug 2015 16:04:20 GMT',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     age: '0',
+30 silly registry.get     connection: 'keep-alive',
+30 silly registry.get     'x-served-by': 'cache-lhr6329-LHR',
+30 silly registry.get     'x-cache': 'MISS',
+30 silly registry.get     'x-cache-hits': '0',
+30 silly registry.get     'x-timer': 'S1440605060.770806,VS0,VE93' } ]
+31 silly lockFile 1f43ecc2-node-modules node_modules@
+32 silly lockFile 1f43ecc2-node-modules node_modules@
+33 error 404 Not Found
+33 error 404
+33 error 404 'node_modules' is not in the npm registry.
+33 error 404 You should bug the author to publish it
+33 error 404 It was specified as a dependency of 'dr_uber_app'
+33 error 404
+33 error 404 Note that you can also install from a
+33 error 404 tarball, folder, or http url, or git url.
+34 error System Linux 3.13.0-62-generic
+35 error command "/usr/bin/node" "/usr/bin/npm" "install" "node_modules" "--save"
+36 error cwd /home/oyama/projects/dr_uber_app
+37 error node -v v0.10.40
+38 error npm -v 1.4.28
+39 error code E404
+40 verbose exit [ 1, true ]
