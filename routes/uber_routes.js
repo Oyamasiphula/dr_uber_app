@@ -39,14 +39,15 @@ exports.save_driver_issues = function (req, res, next) {
 
 		var input = JSON.parse(JSON.stringify(req.body));
 		concat_issues = "";
+		console.log(input)
 
-		for(issue in input){
-			concat_issues += input[issue]+" ";
-		}
 
-		concat_issues = concat_issues.slice(0, concat_issues.length-1);
+		concat_issues += (input.issues).toString();
 
-			connection.query("INSERT INTO ref_table (driver_details_id, issues) values((SELECT id FROM driver_details WHERE cell_number=? AND surname = ?), ?)", [driver_details.cell_number, driver_details.surname, concat_issues], function(err, status){
+		// concat_issues = concat_issues.slice(0, concat_issues.length-1);
+		console.log(concat_issues)
+
+			connection.query("INSERT INTO ref_table (driver_details_id, issues, date) values((SELECT id FROM driver_details WHERE cell_number=? AND surname = ?), ?, ?)", [driver_details.cell_number, driver_details.surname, concat_issues, input.date], function(err, status){
 				if (err) {
 					console.log(err, status)
 					return next(err);

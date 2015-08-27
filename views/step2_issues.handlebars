@@ -6,7 +6,7 @@
 
         {{#issues}}
             <li>
-                <input type="checkbox" name="issue{{id}}" value="{{id}}" /> <span>{{issue}}</span>
+                <input type="checkbox" name="issues" value="{{id}}" /> <span>{{issue}}</span>
 
             </li>
         {{/issues}}
@@ -14,7 +14,7 @@
 <div class="dark-placeholder">
 	<h1>Pick Your Day</h1>
   <p><strong>Calendar:</strong></p>
-  <input class="topcoat-date-picker" type="date" name="date">
+  <input class="topcoat-date-picker" type="date" name="date" required>
   </div>
       <input type="submit" value="Next" class="button" />
     </form>
