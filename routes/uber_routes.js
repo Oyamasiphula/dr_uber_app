@@ -52,8 +52,7 @@ exports.save_driver_issues = function (req, res, next) {
 					return next(err);
 				};
 
-				res.redirect('issues')
-
+				res.redirect('step4_ref_no')
 			});
 	});
 }
@@ -67,6 +66,25 @@ exports.insert_driver_details = function(req, res, next){
 		var input = JSON.parse(JSON.stringify(req.body));
 
 		connection.query("INSERT INTO driver_details (name, surname, cell_number, email) SELECT * FROM (SELECT ?, ?, ?, ?) AS tmp WHERE NOT EXISTS (SELECT name,surname,cell_number,email FROM driver_details WHERE cell_number = ? AND email = ?) LIMIT 1", [input.name, input.surname, input.cell_number, input.email, input.cell_number, input.email], function(err, status){
+			if (err) {
+				console.log(err, status)
+				return next(err);
+			};
+
+			res.redirect('/');
+		})
+	})
+}
+
+exports.get_ref_info = function(req, res, next){
+	req.getConnection(function(err, connection){
+		if (err) {
+			return next(err);
+		};
+
+		var input = JSON.parse(JSON.stringify(req.body));
+
+		connection.query("SELECT ref_no, date, surname FROM ref_table INNER JOIN driver_details ON driver_details_id = driver_details.id", function(err, status){
 			if (err) {
 				console.log(err, status)
 				return next(err);
