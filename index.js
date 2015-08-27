@@ -41,6 +41,9 @@ app.get('/', function(req, res){
 	res.render('users')
 }); 
 
+app.get('/issues', function(req, res, next){
+	res.render('step2_issues')
+})
 app.post('/issues', dataServices.get_issues); 	
 
 
@@ -50,11 +53,7 @@ app.post('/issues', dataServices.get_issues);
 // 	res.render('step2_issues')
 // });
 
-app.post('/date', function(req, res){
-	// do something with user data
-
-	res.render('step3_date')
-});
+app.post('/date', dataServices.save_driver_issues);
 
 
 // app.get('/users', function(req, res){

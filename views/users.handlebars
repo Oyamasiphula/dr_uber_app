@@ -10,11 +10,17 @@
     </ul>
     
     <form class="form" action="/issues" method="post">
-      <input type="text" name="name" placeholder="First Name" class="textbox" required>
-      <input type="text" name="surname" placeholder="Last Name" class="textbox" required>
-      <input type="text" name="cell_number" placeholder="Cell Number" class="textbox" required>
-      <input type="text" name="email" placeholder="Email Address" class="textbox" required>
-
+      {{#if details}}
+          <input type="text" name="name" value="{{name}}" class="textbox" required>
+          <input type="text" name="surname" value="{{surname}}" class="textbox" required>
+          <input type="text" name="cell_number" value="{{cell_number}}" class="textbox" required>
+          <input type="text" name="email" value="{{email}}" class="textbox" required>
+      {{else}}
+          <input type="text" name="name" placeholder="First Name" class="textbox" required>
+          <input type="text" name="surname" placeholder="Last Name" class="textbox" required>
+          <input type="text" name="cell_number" placeholder="Cell Number" class="textbox" required>
+          <input type="text" name="email" placeholder="Email Address" class="textbox" required>
+      {{/if}}
       <input type="submit" value="Next" class="button" />
     </form>
   </div>

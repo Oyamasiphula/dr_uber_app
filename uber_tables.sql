@@ -20,8 +20,7 @@ create table issues_table(
 create table ref_table(
 						ref_no int not null primary key auto_increment,
 						driver_details_id int not null,
-						issue_id int not null,
+						issues varchar(20) not null,
 						date date,
-						foreign key(issue_id) references issues_table(id),
 						foreign key(driver_details_id) references driver_details(id)
 						);
