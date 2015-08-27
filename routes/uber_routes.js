@@ -59,8 +59,10 @@ exports.save_driver_issues = function (req, res, next) {
 						console.log(err, results)
 						return next(err);
 					};
-					console.log(results)
-					res.redirect('/');
+					// console.log(results)
+					res.render('step4_ref_no', {
+						driver_info : results
+					});
 				})
 			});
 	});

@@ -3,19 +3,19 @@
 	<form class="form" action="/step4_ref_no" method="post">
 
           <strong> <h1>Issue Selection:</h1></strong>
+        <ul>
+          {{#issues}}
+              <li>
+                  <input type="checkbox" name="issues" value="{{id}}"> <span>{{issue}}</span>
 
-        {{#issues}}
-            <li>
-                <input type="checkbox" name="issues" value="{{id}}" /> <span>{{issue}}</span>
-
-            </li>
-        {{/issues}}
-
-<div class="dark-placeholder">
-	<h1>Pick Your Day</h1>
-  <p><strong>Calendar:</strong></p>
-  <input class="topcoat-date-picker" type="date" name="date" required>
-  </div>
+              </li>
+          {{/issues}}
+        </ul>
+        <div class="dark-placeholder">
+        	<h1>Pick Your Day</h1>
+          <p><strong>Calendar:</strong></p>
+          <input class="topcoat-date-picker" type="date" name="date" required>
+          </div>
       <input type="submit" value="Next" class="button" />
     </form>
 </div>
