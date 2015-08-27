@@ -57,8 +57,8 @@ app.get('/issues', function(req, res){
 	res.render('step2_issues');
 }); 	
 
-var port = process.env.port || 2020;
+var portNr = process.env.X_GANG_PORT || 3000;
 
-	app.listen(port,function(){
-		console.log(' *.*listening to localhost:' + port);
-	});
+app.listen(portNr, function(){
+	console.log("app started. port:3000");
+});

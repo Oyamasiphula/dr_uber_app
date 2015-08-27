@@ -54,7 +54,7 @@ exports.save_driver_issues = function (req, res, next) {
 					return next(err);
 				};
 
-				connection.query("SELECT ref_no, date, surname FROM ref_table INNER JOIN driver_details ON driver_details_id = driver_details.id WHERE date=?",driver_details.date, function(err, results){
+				connection.query("SELECT ref_no, date, surname FROM ref_table INNER JOIN driver_details ON driver_details_id = driver_details.id WHERE date=? AND id=(SELECT id FROM driver_details WHERE surname=? AND cell_number=?)",[driver_details.date, driver_details.surname, driver_details.cell_number], function(err, results){
 					if (err) {
 						console.log(err, results)
 						return next(err);
