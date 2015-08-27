@@ -12,6 +12,14 @@
     height: 159px;
     }
 
+.ref_info {
+  background-color: white;
+  width : 60%;
+  border : 1px black solid;
+  padding: 5px;
+  margin : 5px;
+}
+
 .header { 
         background: #FFFFFF url("http://2.bp.blogspot.com/-fEEO0sbC9hQ/VAiiEMSVRFI/AAAAAAAAfOk/HBCfbMPDFf0/s1600/uber.png");
         background-repeat: no-repeat; 
