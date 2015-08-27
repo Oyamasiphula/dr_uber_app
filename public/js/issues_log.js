@@ -3,6 +3,10 @@
   (c) 2013 @ElmahdiMahmoud 
   license: http://www.opensource.org/licenses/mit-license.php
 */   
+$(document).delegate("ul", "click", function() {
+   window.location = $(this).find("a").attr("href");
+});
+
 $('input[name="radio-btn"]').wrap('<div class="radio-btn"><i></i></div>');
 $(".radio-btn").on('click', function () {
     var _this = $(this),
