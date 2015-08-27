@@ -1,8 +1,8 @@
 use uber_data;
 
-DROP USER IF EXISTS uber;
-CREATE USER uber IDENTIFIED BY 'Uber_Uber123';
-GRANT ALL ON uber_data.* TO uber;
+-- DROP USER IF EXISTS uber;
+-- CREATE USER uber IDENTIFIED BY 'Uber_Uber123';
+-- GRANT ALL ON uber_data.* TO uber;
 
 DROP TABLE IF EXISTS ref_table;
 DROP TABLE IF EXISTS issue_table;
