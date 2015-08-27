@@ -44,11 +44,11 @@ app.get('/', function(req, res){
 app.post('/issues', dataServices.get_issues); 	
 
 
-app.post('/issues', function(req, res){
-	// do something with user data
+// app.post('/issues', function(req, res){
+// 	// do something with user data
 
-	res.render('step2_issues')
-});
+// 	res.render('step2_issues')
+// });
 
 app.post('/date', function(req, res){
 	// do something with user data
