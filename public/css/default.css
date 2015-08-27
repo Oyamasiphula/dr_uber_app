@@ -7,6 +7,12 @@
     height: 159px;
 }
 
+.btn {
+  width: 10%;
+  font-family: sans-serif;
+  height: 10%;
+}
+
 .image2{
     width: 367px;
     height: 159px;
