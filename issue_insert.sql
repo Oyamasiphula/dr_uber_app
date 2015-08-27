@@ -1,4 +1,4 @@
-insert into issues_table (issue) values("Issue with app");
+insert into issues_table (issue)values("Issue with app");
 insert into issues_table (issue)values("Issue with payment");
 insert into issues_table (issue)values("Issue with uploading docs");
 insert into issues_table (issue)values("Add or change vehicle");

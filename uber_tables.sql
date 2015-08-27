@@ -1,6 +1,6 @@
 use uber_data; 
 
-DROP USER IF EXISTS uber;
+DROP USER IF EXISTS uber ;
 CREATE USER uber IDENTIFIED BY 'Uber_Uber123';
 GRANT ALL ON uber_data.* TO uber;
 
