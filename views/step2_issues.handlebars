@@ -1,8 +1,8 @@
 <div id="bg">
 <div class="wrapper">
-	<form class="form" action="/date" method="post">
+	<form class="form" action="/step4_ref_no" method="post">
 
-          <strong> <h4>Issue Selection:</h4></strong>
+          <strong> <h1>Issue Selection:</h1></strong>
 
         {{#issues}}
             <li>
@@ -11,7 +11,16 @@
             </li>
         {{/issues}}
 
+<div class="dark-placeholder">
+	<h1>Pick Your Day</h1>
+  <p><strong>Calendar:</strong></p>
+  <input class="topcoat-date-picker" type="date" name="date">
+  </div>
       <input type="submit" value="Next" class="button" />
     </form>
 </div>
+
 </div>
+
+
+
