@@ -3,6 +3,11 @@
 	<form class="form" action="/step4_ref_no" method="post">
 
           <strong> <h1>Issue Selection:</h1></strong>
+          {{#if msg}}
+            <center>
+              <li><span>{{msg}}</span></li>
+            <center>
+          {{/if}}
         <ul>
           {{#issues}}
               <li>
@@ -19,7 +24,7 @@
           </span></li>
           </h2>
           {{!-- <p><strong>Calendar:</strong></p> --}}
-            <input class="topcoat-date-picker" type="date" name="date" required>
+            <input placeholder='yyyy/mm/dd' class="topcoat-date-picker" type="date" name="date" required>
           </center>
           {{!-- </div> --}} <br/>
       <input type="submit" value="Next" class="button" />

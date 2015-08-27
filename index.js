@@ -42,23 +42,25 @@ app.get('/', function(req, res){
 
 app.post('/issues', dataServices.get_issues);
 
-app.get('/issues', function(req, res, next){
-	res.render('step2_issues')
-});
+app.get('/issues', dataServices.select_issue);
 
 app.post('/step4_ref_no', dataServices.save_driver_issues);
 
 // app.get('/step4_ref_no', dataServices.get_ref_info)
 // app.get('/users', function(req, res){
 // 	res.render('users');
-// }); 	
+// });
 
 app.get('/issues', function(req, res){
 	res.render('step2_issues');
-}); 	
+});
 
-var portNr = process.env.X_GANG_PORT || 3001;
+app.get('/present_drivers', function(req, res, next){
+	res.render('present_drivers')
+}) 	
+
+var portNr = process.env.X_GANG_PORT || 3002;
 
 app.listen(portNr, function(){
-	console.log("app started. port:3001");
+	console.log("app started. port:", portNr);
 });

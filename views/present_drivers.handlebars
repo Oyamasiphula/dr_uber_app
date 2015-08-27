@@ -1,0 +1,24 @@
+<div id="bg">
+	<div class="module">
+		<center>
+			<form action="/consult" action="post">
+				<table>
+					<thead>
+						<tr>
+							<th><h2>Present Ref. No's</h2></th>
+						<tr>
+					</thead>
+					<tbody>
+						{{#ref_nos}}
+							<tr>
+								<td name="ref_no">{{ref_no}}</td>
+							</tr>
+						{{/ref_nos}}
+					</tbody>
+				</table>
+			
+				<input type="submit" value="Consult">
+			</form>
+		</center>
+	</div>
+</div>

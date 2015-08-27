@@ -4,8 +4,6 @@
   "description": "Troubleshooting driver profile issues( signup ).",
   "main": "index.js",
   "dependencies": {
-    "bcrypt": "^0.8.5",
-    "bluebird": "^2.9.34",
     "body-parser": "^1.13.3",
     "express": "^4.12.4",
     "express-handlebars": "^2.0.1",

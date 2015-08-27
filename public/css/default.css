@@ -13,6 +13,12 @@
   height: 10%;
 }
 
+td {
+  border: solid black 2px;
+  padding: 5px;
+  margin: 5px;
+}
+
 .image2{
     width: 367px;
     height: 159px;
