@@ -39,19 +39,26 @@ app.get('/', function(req, res){
 	res.render('users')
 }); 
 
+<<<<<<< HEAD
 app.post('/issues', function(req, res){
 	// do something with user data
+=======
+app.get('/issues', function(req, res, next){
+	res.render('step2_issues')
+})
+app.post('/issues', dataServices.get_issues); 	
+
+
+// app.post('/issues', function(req, res){
+// 	// do something with user data
+>>>>>>> fd4e96827446a47fb65c82d567cd46b4e0c66851
 
 	res.render('step2_issues')
 });
 
-app.post('/date', function(req, res){
-	// do something with user data
+app.post('/step4_ref_no', dataServices.save_driver_issues);
 
-	res.render('step3_date')
-});
-
-
+app.get('/step4_ref_no', dataServices.get_ref_info)
 // app.get('/users', function(req, res){
 // 	res.render('users');
 // }); 	
