@@ -3,7 +3,8 @@ var express = require('express'),
     mysql = require('mysql'), 
     myConnection = require('express-myconnection'),
     bodyParser = require('body-parser'),
-    session = require('express-session');
+    session = require('express-session'),
+    dataServices = require('./routes/uber_routes');
 
 var dbOptions = {
 		host: 'localhost',
@@ -39,20 +40,9 @@ app.get('/', function(req, res){
 	res.render('users')
 }); 
 
-<<<<<<< HEAD
-app.post('/issues', function(req, res){
-	// do something with user data
-=======
+app.post('/issues', dataServices.get_issues);
+
 app.get('/issues', function(req, res, next){
-	res.render('step2_issues')
-})
-app.post('/issues', dataServices.get_issues); 	
-
-
-// app.post('/issues', function(req, res){
-// 	// do something with user data
->>>>>>> fd4e96827446a47fb65c82d567cd46b4e0c66851
-
 	res.render('step2_issues')
 });
 
@@ -64,7 +54,7 @@ app.get('/step4_ref_no', dataServices.get_ref_info)
 // }); 	
 
 app.get('/issues', function(req, res){
-	res.render('issues');
+	res.render('step2_issues');
 }); 	
 
 var port = process.env.port || 2020;
