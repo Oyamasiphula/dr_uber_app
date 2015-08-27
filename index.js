@@ -60,5 +60,5 @@ app.get('/issues', function(req, res){
 var portNr = process.env.X_GANG_PORT || 3001;
 
 app.listen(portNr, function(){
-	console.log("app started. port:3000");
+	console.log("app started. port:3001");
 });
